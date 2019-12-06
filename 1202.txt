@@ -1,0 +1,86 @@
+compmgmt.msc -> 컴퓨터 관리
+
+multi	Pa55w.rd
+
+암호 복잡성 : 대문자 + 소문자 + 숫자 + 특수문사 중 3가징 이상 조합
+
+정책 : gpedit.msc
+
+cmd 관리자권한으로 켜고 cd \ -> cls(화면 청소)
+
+ipconfig /all  -> ip정보 확인
+
+ncpa.cpl -> ip셋팅 화면
+
+쉬프트 엔터 -> cmd에서 복사
+마우스 오른쪽 -> 붙어녛기
+
+<클라우드 컴퓨팅>
+벤더(Public Cloud)
+1. 아마존 
+2. AZURE (MS) 
+3. 구글
+
+서비스
+IaaS
+PaaS
+SaaS
+
+특징
+•On-Demand Self Service – 자신이원하는서비스를만들어서사용한다
+•Broad Network access – 네트워크를통해서사용한다.
+•Resource Pooling(가상화) – DataCenter의리소스들이풀링되어있다. (Compute(계산, Server), Network, Storage )
+•Lower operational expenses – On-premises(회사, Private Cloud) 환경보다운영관리비용이저렴하다
+
+Private Cloud
+회사에서 자체적으로 이용하는 클라우드 서비스
+Hiper-v 를 이용해 만든다
+
+클라우드의 정의
+Scalable -> 사용자의 수의 따라 확장성이 있어야한다.
+Elastic -> 신축성이 있어야한다.
+(확장성있고 신축적이며 인터넷을 이용한 모든 서비스)
+
+Hipver-v 가상머신
+Host OS : Hardware 에 직접 설치된 OS (Windows 10 Entprise)
+VM(Virtual Machine) : Hiper-V 환경에 설치된 OS (Windows Server 2016) = Guest OS
+
+VHD Booting : VM을 Host OS환경으로 구현
+	.vhd  <- 가상하드 파일 (VM OS), 2008
+	.vhdx <- 가상하드 파일 (VM OS), 2012, 2016, 2019
+
+	bcdboot f:windows <- 해당 드라이버에 들어있는 윈도우로 부트파일을 만듦
+
+
+시스템 H/W 4대요소 : CPU, RAN, HDD, LAN
+
+MS의 모든 Software 평가판 다운 주소
+https://www.microsoft.com/ko-kr/evalcenter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

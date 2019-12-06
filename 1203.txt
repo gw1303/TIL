@@ -1,0 +1,127 @@
+컴퓨터의 성능을 좌우하는 4가지 - CPU, RAM, HDD, LAN
+
+OS
+	- Client OS
+	- Server OS (NOS:Network OS)
+
+RAID - HDD 여러개를 그룹핑해서 성능을 올리는 기술, 
+     - 내결함성 : HDD하나가 고장나도 다른 HDD로 엑세스 가능
+
+
+TCP/IP : IP, 서브넷마스크, 게이트웨이, DNS가 있어야 통신이 가능
+	- Dynamic Configuration (자동 구성, 유동IP) : DHCP Server에서 할당 받아온다.
+	    (Client OS)
+	    APIPA (Automatic Private IP Address) : DHCP Server에서 IP를 못받아올 경우 OS에서 자동으로 할당하는 IP(169.254.x.x)
+            -> 인터넷X, 자기 네트워크 내의 컴퓨터와는 접속 가능
+
+	- Static Configuration (수동구성, 고정IP)
+	    (Server OS)
+		IP : 
+		Subnet Mask : 
+		Gateway : 
+		DNS : 
+
+Protocol : 통신규약 -> TCP/IP, IPX/SPX, Apple talk..
+
+<cmd용어>
+md : 폴더 생성
+cd : 이동
+> : 파일 생성
+tap[자동완성]
+mstsc /v ip주소 : 원격접속
+tracert domain : 해당 도메인 접속하기 위해 거치는 라우터 ip
+
+UNC경로 : Network의 공유폴터에 접속하는 경로(SMB 3.0)
+	\\컴퓨터이름\공유이름	 <- 같은 네트워크에서만 접근
+	\\IP_Address\공유이름	ex. net use v: \\70.12.113.130\share 
+	\\DNS_Name\공유이름
+
+<WS2016 - Server Manager>
+	Role    : 서버 서비스(16, Web, FTP, DNS, DHCP, Hiper-V,,,)
+	Feature : OS에서 지원해주는 기능 (35)
+
+Linux(무료-기술지원X)의 종류
+  Red Hat(유료-기술지원O) : 기업에서 사용
+  CentOS(Red Hat의 무료버전)
+  Fedora(최신버전, 무료테스트버전)
+  Debian(멀티미디어 기능이 들어감)
+    - Ubuntu : Debian의 자식버전
+
+Virtual Switch
+  - External  : 실무에서 사용, VM에 Host OS의 네트워크 대역의 IP가 할당 (VM에 Public IP 할당가능)
+  - Internal  : 테스트나 개발, Private IP 할당 (Host OS와 VM과 통신 가능, NAT구성시 인터넷 연결)
+  - Private   : 테스트나 개발, Private IP 할당 (VM과만 통신 가능)
+
+Virtualization (가상화)
+  - Type 1 : 실무환경에 사용 (MS Hiper-V, VMware ESX, CTRIX Zen)
+	CPU에서 가상화 지원, RAM의 DEP 지원
+  - Type 2 : 개발, 테스트   (VMware Workstaion, Player, Oracle Virtual BOX)
+
+
+Public IP (공인IP) : IANA(국제 IP관리 단체)의 퍼블릭망에서 라우팅 가능한 IP
+
+Private IP (사설IP): IANA에서 누구나 사용 가능하도록 허용한 IP
+  목적 : 적은 공인 IP로 많은 시스템을 인터넷(NAT), 보안
+	10.X.X.X
+	172.16.X.X ~ 172.31.X.X
+	192.168.X.X
+-> 가정에서는 공유기(공인IP)에서 여러가지 사설 IP를 할당
+
+리눅스 CentOS설치 시 셋팅
+  소프트웨어
+  파티션
+  네트워크
+
+Port : 데이터가 전송되는 통로 (0 ~ 65,536) TCP or UDP (c:\windows\system32\drivers\etc\services)
+  1 ~ 1024 : 잘 알려진 포트
+    TCP 21 : FTP	파일 전송
+    TCP 22 : SSH	암호화 지원 O
+    TCP 23 : Telnet     암호화 지원 X
+    TCP 25 : SMTP	메일 전송
+    TCP 53 : DNS Zone Transfer		1차 DNS복제
+    UDP 53 : DNS Name Resolution	DNS 이름 풀이
+ UDP 67,68 : DHCP
+    TCP 80 : http
+   TCP 443 : Https
+   TCP 110 : POP3
+  TPC 3389 : RDP (Remote Desktop Protocol) : Window Server 원격관리
+  1025 ~ 5000 : Application
+
+<리눅스 명령어>
+clear : cmd cls
+ifconfig = ip addr : cmd ipconfig
+nutui : ip편집
+systemctl restart network : ip편집하면 네트워크 재실행
+
+
+---------------------------------이론-----------------------------------------
+27p
+클라우드는 확장서있고 신축성이 있으며 네트워크를 이용한 서비스이다.
+Private Cloud
+
+31p
+IaaS : 서버, 네트워크, 스토리지의 가상화 배포
+PaaS : OS유지보수를 밴더가 관리
+SaaS : 소프트웨어까지 밴더가 관리
+
+* 3Tier
+
+32p
+Middleware - DB
+Runtime - JAVA, .net 등의 실행을 위한 
+
+
+윈도우는 8839포트를 열기 RDP
+리눅스는 22포트 열기 SSH
+
+
+
+
+
+
+
+
+
+
+
+

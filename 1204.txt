@@ -1,0 +1,26 @@
+NAT (Network Address Translation) : 사설 IP(내부망에서 사용)가 인터넷망을 사용하기 위해서 패킷의 Source Address를 
+				    공인 IP(인터넷망에서 사용) Address로 변환해서 인터넷망으로 내보내야한다.
+IP = Network Address(=우편번호) + Host Address(=세부주소)
+Subnet Mask = Network Address를 식별하는 역할 
+
+Host : 네트워크의 장치 (라우터, 스위치, 프린터, 컴퓨터 .. )
+       
+ICS (Internet Connection Sharing) : 인터넷 연결 공유
+   인터넷으로 나가는 인터페이스에서 설정
+
+https://docs.microsoft.com/ko-kr
+https://docs.microsoft.com/ko-kr/learn/azure/ <-- Azure실습 Step by Step으로 Lab 제공
+
+DNS : 
+
+
+
+
+
+
+
+
+
+
+
+
