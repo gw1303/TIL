@@ -137,3 +137,14 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 * 변경되는 사항이 있으면 항상 `add`, `commit`, `push`를 진행한다.
 
+
+
+## 딥러닝
+
+coursera - ML/DL (원록적인 수업느낌) 
+
+udacity - ML (조금 쉽게)
+
+edx
+
+# 모두를 위한 머신러닝/딥러닝 강의
