@@ -1,0 +1,466 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "안녕하세요\n",
+      "3\n",
+      "3\n"
+     ]
+    }
+   ],
+   "source": [
+    "print (\"안녕하세요\")\n",
+    "print (3)\n",
+    "print (\"3\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "8"
+      ]
+     },
+     "execution_count": 43,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "\"\"\"\n",
+    "긴 텍스트\n",
+    "\"\"\"\n",
+    "# 주석\n",
+    "1 + 2\n",
+    "print (1+2) # 파이참에서는 print 함수 필수\n",
+    "\n",
+    "1 / 2 # 정수 / 정수 => 실수 (파이썬 3버젼)\n",
+    "      # 정수 / 정수 => 정수 (파이썬 2버젼)\n",
+    "4 // 2  # 소수점 이하는 버림\n",
+    "5 % 3  # 5를 3으로 나눈 나머지\n",
+    "\n",
+    "4 // 2    # 정수 2\n",
+    "4 // 2.0  # 실수 2.0\n",
+    "4.1 // 2.0  # 실수 2.0\n",
+    "4.1 // 2.5  # 실수 1.0\n",
+    "\n",
+    "x=12411265411624161254124461424614241241241241241412412412\n",
+    "y=121465121461254016125062141461214612412412414124124124124\n",
+    "x * y  # 메모리가 받쳐주는 한도 내에서 어느 범위는 연산 가능\n",
+    "\n",
+    "2**10  # 제곱근"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "9"
+      ]
+     },
+     "execution_count": 48,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# 실수 -> 정수\n",
+    "int(3.14) # 정수 3\n",
+    "int(5/2)\n",
+    "\n",
+    "int('9')  # 문자로 된 숫자 -> 정수 가능"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "str"
+      ]
+     },
+     "execution_count": 51,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(3.14)  # float\n",
+    "type(5)  # int\n",
+    "type('A')  # str"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 58,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "divmod(7,3)  # (2, 1) // (몫, 나머지)\n",
+    "type(divmod(7,3))  # tuple형태로 몫과 나머지가 구해짐\n",
+    "\n",
+    "# 자료(데이터), 자료형(자료 타입, 데이터 타입)\n",
+    "\n",
+    "x = divmod(7,3)\n",
+    "x[0]  # 튜플 자료에 대한 접근\n",
+    "x[1]  # 파이썬은 index가 0부터 시작\n",
+    "x[2]  # 범위를 벗어났으므로 에러"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = 3  # a는 변수(데이터를 저장하는 장소)\n",
+    "a = 5\n",
+    "\n",
+    "a, b = 1, 2  # 파이썬에서만 특수하게 사용가능한 구문\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "10"
+      ]
+     },
+     "execution_count": 72,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# 참고사항\n",
+    "0b111  # 0b = 2진수\n",
+    "0o11  # 0o = 8진수\n",
+    "0xA  # 0x = 16진수"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 77,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 77,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "4.3 - 2.7 == 1.6  # (false) 1.599999로 처리됨\n",
+    "# 정밀하게 구하기 위해선 오차에 대한 전처리 필"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 78,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "4.0"
+      ]
+     },
+     "execution_count": 78,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# 자료의 표현범위가 넓은쪽으로 계산이 됨 (실수에 정수가 포함)\n",
+    "1 + 3\n",
+    "1 + 3.0"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 89,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "9\n",
+      "12.1\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 데이터를 실수로 변환\n",
+    "print (int(9))\n",
+    "#int('9.1')  # 실수 문자이므로 int를 적용할 수 없음\n",
+    "print(float('9.1') + 3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 111,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 111,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import math,sys\n",
+    "# math 수학 연산과 관련된 연산 함수 패키치\n",
+    "# sys 시스템과 관련된 함수 패키지\n",
+    "\n",
+    "x = 0.1+0.2\n",
+    "\n",
+    "# 1)\n",
+    "math.fabs(x - 0.3) <= sys.float_info.epsilon # ture가 나오면 같은 값으로 판단\n",
+    "# fabs : 절대값을 구해주는 함수\n",
+    "\n",
+    "#sys.float_info.epsilon # 2 * 10의 -16승\n",
+    "\n",
+    "# 2) python 3.5이상버전\n",
+    "math.isclose(0.1 + 0.2, 0.3)  # 실수값을 직접 비교해야 할 때 사용"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 131,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\"Python is very easy.\"he says.\n",
+      "\"Python is very easy.\"he says.\n",
+      "you\n",
+      "need\n",
+      "python\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 문자열\n",
+    "\n",
+    "x = 'a'\n",
+    "x = \"a\"\n",
+    "x = \"\"\"\n",
+    "안녕하세요\n",
+    "\n",
+    "\"\"\"\n",
+    "# enter도 문자로 인식\n",
+    "x\n",
+    "\n",
+    "# 문자열 안에 따옴표가 들어가면 다른 따옴표로 묶기\n",
+    "x = \"Python's favorite food is egg\"\n",
+    "x\n",
+    "x = 'Python\"s favorite food is egg'\n",
+    "x\n",
+    "\n",
+    "say = '\"Python is very easy.\"he says.'\n",
+    "print(say)\n",
+    "say = \"\\\"Python is very easy.\\\"he says.\"  # \\뒤에 기호를 적으면 문자열 기호로 인식\n",
+    "print(say)\n",
+    "\n",
+    "x = \"you need python\"\n",
+    "x = \"you\\nneed\\npython\"  # \\n은 줄바꿈 기호\n",
+    "print(x)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 135,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      " is easy is easy\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = 'python'\n",
+    "y = ' is easy'\n",
+    "x + y  # 문자열 합치기\n",
+    "print(y*2)  # 문자열 반복 출력\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 138,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "19"
+      ]
+     },
+     "execution_count": 138,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x = \"My leg is too short\"\n",
+    "len(x)  # 길이 반환 함수 (공백 포함)\n",
+    "\n",
+    "# 내장함수(파이썬 기본), 외장함수(패키지)\n",
+    "# 패키지 : 함수, 패키지들의 묶음 == 폴더\n",
+    "# 외장함수는 패키지에 저장되어 있으므로 사용하기 위해서는 사전에 가져와야함(import 패키지이름)\n",
+    "# \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 151,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'y'"
+      ]
+     },
+     "execution_count": 151,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# 인덱싱(영역 참조), 슬라이싱(영역 잘라내기)\n",
+    "\n",
+    "# 인덱싱\n",
+    "x = 'Python is easy. you need python'\n",
+    "x[0]  # P (인덱싱은 첫 글자가 0)\n",
+    "x[1]  # y\n",
+    "x[-2]  # o (-는 뒤에서 부터)\n",
+    "\n",
+    "x[5:]  # n번째부터 마지막 문자까지 [시작위치 : 끝위치-1]\n",
+    "x[:10]  # 0번째 부터 n번째 문자까지 \n",
+    "\n",
+    "x[10:14]  # easy 인덱싱\n",
+    "x[10] + x[11] + x[12] + x[13]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 158,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "karea\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "'korea'"
+      ]
+     },
+     "execution_count": 158,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "\"\"\"\n",
+    "a = 'karea'\n",
+    "a[1] = 'o'\n",
+    "a\n",
+    "\"\"\"\n",
+    "# a[1]='o'에 저장된 문자열의 특정 문자 변경 오류 -> 슬라이싱으로 해결 가능\n",
+    "a = 'karea'\n",
+    "print(a)\n",
+    "a = a[0] + 'o' + a[2:]\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
